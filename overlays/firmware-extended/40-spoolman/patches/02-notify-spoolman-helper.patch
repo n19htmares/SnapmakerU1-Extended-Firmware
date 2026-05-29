@@ -29,7 +29,7 @@
 @@ -176,6 +187,10 @@
          else:
              self._state[channel] = FILAMENT_DT_STATE_IDLE
-             self._filament_info_update(channel, copy.deepcopy(filament_protocol.FILAMENT_INFO_STRUCT), True)
+             self._filament_info_update(channel, dict(filament_protocol.FILAMENT_INFO_STRUCT), True)
 +        
 +        spoolman = self.getSpoolman()
 +        if spoolman:
